@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-import string
 from copy import deepcopy
 
 
@@ -71,7 +70,8 @@ def main():
     stacks_raw, instructions_raw = f.read().split("\n\n")
 
     stacks = parse_stacks(stacks_raw)
-    stacks_2 = deepcopy(stacks) # need deep copy because the perform instructions in place (deep copy = copy of each interior object)
+    # need deep copy because the perform instructions in place (deep copy = copy of each interior object)
+    stacks_2 = deepcopy(stacks)
     instructions = parse_instructions(instructions_raw)
 
     for instruction in instructions:
